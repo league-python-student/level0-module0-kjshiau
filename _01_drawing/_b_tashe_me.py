@@ -33,7 +33,7 @@ def screenClicked(x, y):
     moustach.showturtle()
     
     # 5. Move your moustache to a new location using .goto(x, y)
-    moustach.goto(x, y)
+    moustach.goto(9, 9)
 if __name__ == '__main__':
     window = turtle.Screen()
     
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     # 3. Create a variable called moustache and set it equal to addMoustache('moustache1.gif')
     # moustache = addMoustache('moustache1.gif')
-    moustach = addMoustache('moustache2.gif')
+    moustach = addMoustache('moustache1.gif')
 # ===================== DO NOT EDIT THE CODE BELOW ============================
     window.onclick(screenClicked)
     turtle.done()

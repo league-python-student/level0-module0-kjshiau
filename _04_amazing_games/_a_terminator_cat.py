@@ -1,6 +1,9 @@
 import turtle
 from PIL import Image
+import random
 
+def getRandomColor():
+    return "#%06X" % (random.randint(0, 0xFFFFFF))
 
 class Eye():
     def __init__(self, turtle=None, x=0, y=0, radius=30):
@@ -40,13 +43,17 @@ def keyPressed():
 
     # LASER BEAM.  This code will make your ellipse move down and to the right when you press
     # the space bar. Run the program to test it.
-
+    leftEye.x += 5
+    leftEye.y -= 5
+    rightEye.x += 5
+    rightEye.y += 5
     # 10. Increment the x and y variables of the 2 eye variables by 5:
-    #     leftEye.x += 5
-
+    #     leftEye.x +=
     # 11. Call the .draw() method for both eye variables.
+    YinYang.color(getRandomColor())
 
-
+    leftEye.draw()
+    rightEye.draw()
 if __name__ == '__main__':
     window = turtle.Screen()
 
@@ -59,16 +66,16 @@ if __name__ == '__main__':
 
     # 2. Call the setBackground() function with your variable inside of the parenthesis
     #    for example, setBackground(bgImage)
-
+    setBackground('bigEyedCat2.gif')
     # 3. Make a new turtle
-
+    YinYang = turtle.Turtle()
     # 4. Set the turtle color and pen color to red (or any color you want)
     #    using .color('red', 'red')
-
+    YinYang.color('red', 'red')
     # 5. Set the turtle width to 0 so no outlines are drawn
-
+    YinYang.width(0)
     # 6. Set the turtle speed to 0 (fastest)
-
+    YinYang.speed(0)
     # 7. Run the program and click on one of the cat's eyes.
     #    The x,y position of the eye will be printed at the bottom of your processing window.
     #    Variables for x and y have been created at the top of your sketch,
@@ -77,9 +84,11 @@ if __name__ == '__main__':
     # 8. After you've found the x and y for the eyes create 2 eye variables and initialize them:
     #    leftEye = Eye(turtle=myTurtle, x=-34, y=11, radius=30)
     #    rightEye = Eye(turtle=myTurtle, x=40, y=-5, radius=30)
-
+    leftEye = Eye(turtle=YinYang, x=-41, y=52, radius=30)
+    rightEye = Eye(turtle=YinYang, x=-1, y=53, radius=30)
     # 9. Call the .draw() method on both eye variables
-
+    leftEye.draw()
+    rightEye.draw()
     # ===================== DO NOT EDIT THE CODE BELOW ============================
     window.onclick(screenClicked)
     window.onkeypress(keyPressed, 'space')

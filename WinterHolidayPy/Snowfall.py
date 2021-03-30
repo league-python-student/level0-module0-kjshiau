@@ -6,7 +6,7 @@ class Snowfall:
         self.snowLevel = 0
         self.minSnowSize = 1
         self.maxSnowSize = 10
-        self.isWindy = False
+        self.isWindy = True
         self.amountSnowFallen = 0
         self.snowColor = '#FFFFFF'
     

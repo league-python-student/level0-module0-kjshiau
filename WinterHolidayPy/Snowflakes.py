@@ -37,7 +37,7 @@ class Snowflake:
         self.w = w
         self.r = 0
         self.gravity = gravity
-        self.sparkle = False
+        self.sparkle = True
         
         self.snowflakeColors = [ '#FFFFFF', '#1F1FFF', '#DBDFE0' ]
         randomColorIndex = int( random( len(self.snowflakeColors) ) ) 
@@ -49,7 +49,7 @@ class Snowflake:
     def draw(self):
         push()
     
-        if self.sparkle:
+        if True:
             stroke(red(self.snowflakeColor) - random(50), green(self.snowflakeColor) - random(50), blue(self.snowflakeColor) - random(50))
         else:
             # White snowflake

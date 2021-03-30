@@ -43,10 +43,10 @@ def keyPressed():
 
     # LASER BEAM.  This code will make your ellipse move down and to the right when you press
     # the space bar. Run the program to test it.
-    leftEye.x += 5
-    leftEye.y -= 5
+    leftEye.x -= 5
+    leftEye.y += 5
     rightEye.x += 5
-    rightEye.y += 5
+    rightEye.y -= 5
     # 10. Increment the x and y variables of the 2 eye variables by 5:
     #     leftEye.x +=
     # 11. Call the .draw() method for both eye variables.
